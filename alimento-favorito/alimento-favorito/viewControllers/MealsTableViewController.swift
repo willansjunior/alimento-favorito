@@ -13,6 +13,16 @@ class MealsTableViewController : UITableViewController {
     var meals = [Meal(name: "Sorvete de Morango", happiness: 5),
                  Meal(name: "Risole", happiness: 5)]
     
+    func add(meal:Meal) {
+        meals.append(meal)
+        tableView.reloadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let view = segue.destination as! ViewController
+        view.mealsTable = self
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return meals.count
     }
