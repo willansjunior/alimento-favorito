@@ -16,6 +16,7 @@
 		EBB4A9252252C8C200C2BCE8 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB4A9242252C8C200C2BCE8 /* Item.swift */; };
 		EBB4A9272252CA4E00C2BCE8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB4A9262252CA4E00C2BCE8 /* ViewController.swift */; };
 		EBB4A9292252CB6000C2BCE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB4A9282252CB6000C2BCE8 /* Main.storyboard */; };
+		EBB4A92B22539A0D00C2BCE8 /* MealsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB4A92A22539A0D00C2BCE8 /* MealsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		EBB4A9242252C8C200C2BCE8 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		EBB4A9262252CA4E00C2BCE8 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EBB4A9282252CB6000C2BCE8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		EBB4A92A22539A0D00C2BCE8 /* MealsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				EBB4A9262252CA4E00C2BCE8 /* ViewController.swift */,
+				EBB4A92A22539A0D00C2BCE8 /* MealsTableViewController.swift */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBB4A92B22539A0D00C2BCE8 /* MealsTableViewController.swift in Sources */,
 				EBB4A9252252C8C200C2BCE8 /* Item.swift in Sources */,
 				EBB4A9232252C84900C2BCE8 /* Meal.swift in Sources */,
 				EBB4A9272252CA4E00C2BCE8 /* ViewController.swift in Sources */,
