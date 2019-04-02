@@ -13,7 +13,7 @@ class MealsTableViewController : UITableViewController {
     var meals = [Meal(name: "Sorvete de Morango", happiness: 5),
                  Meal(name: "Risole", happiness: 5)]
     
-    func add(meal:Meal) {
+    func add(_ meal:Meal) {
         meals.append(meal)
         tableView.reloadData()
     }

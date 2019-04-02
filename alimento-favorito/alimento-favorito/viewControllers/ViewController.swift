@@ -30,7 +30,7 @@ class ViewController: UIViewController {
                 return
             }
             
-            mealsTable?.add(meal: meal)
+            mealsTable?.add(meal)
             
             if let navigation = navigationController {
                 navigation.popViewController(animated: true)
