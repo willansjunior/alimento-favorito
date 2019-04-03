@@ -25,6 +25,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         Item(name: "Chocolate chip", calories: 10)
         ]
     
+    var selected = Array<Item>()
     var delegate : AddAMealDelegate?
     
     @IBAction func add() {
@@ -34,8 +35,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let name:String = nameField!.text!
         if let happiness = Int(happinessField!.text!) {
-            let meal = Meal(name: name, happiness: happiness)
-            
+            let meal = Meal(name: name, happiness: happiness, items: selected)
+//            meal.items = selected
             print("Comi \(meal.name) e a nota foi \(meal.happiness)")
             
             if (delegate == nil) {
@@ -70,6 +71,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if let cell = tableView.cellForRow(at: indexPath) {
             if (cell.accessoryType == UITableViewCell.AccessoryType.none) {
                 cell.accessoryType = UITableViewCell.AccessoryType.checkmark
+                let item = indexPath.row
+                selected.append(items[item])
             } else {
                 cell.accessoryType = UITableViewCell.AccessoryType.none
             }
