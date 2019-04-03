@@ -18,6 +18,8 @@
 		EBB4A9292252CB6000C2BCE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB4A9282252CB6000C2BCE8 /* Main.storyboard */; };
 		EBB4A92B22539A0D00C2BCE8 /* MealsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB4A92A22539A0D00C2BCE8 /* MealsTableViewController.swift */; };
 		EBB4A9312254C85F00C2BCE8 /* AddAMealDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB4A9302254C85F00C2BCE8 /* AddAMealDelegate.swift */; };
+		EBB4A93522555E5C00C2BCE8 /* NewItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBB4A93322555E5C00C2BCE8 /* NewItemViewController.xib */; };
+		EBB4A93722555E9F00C2BCE8 /* NewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB4A93622555E9F00C2BCE8 /* NewItemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		EBB4A9282252CB6000C2BCE8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		EBB4A92A22539A0D00C2BCE8 /* MealsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsTableViewController.swift; sourceTree = "<group>"; };
 		EBB4A9302254C85F00C2BCE8 /* AddAMealDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAMealDelegate.swift; sourceTree = "<group>"; };
+		EBB4A93322555E5C00C2BCE8 /* NewItemViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewItemViewController.xib; sourceTree = "<group>"; };
+		EBB4A93622555E9F00C2BCE8 /* NewItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewItemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				EBB4A9282252CB6000C2BCE8 /* Main.storyboard */,
+				EBB4A93322555E5C00C2BCE8 /* NewItemViewController.xib */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 		EBB4A9202252C81F00C2BCE8 /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				EBB4A93622555E9F00C2BCE8 /* NewItemViewController.swift */,
 				EBB4A9262252CA4E00C2BCE8 /* ViewController.swift */,
 				EBB4A92A22539A0D00C2BCE8 /* MealsTableViewController.swift */,
 			);
@@ -267,6 +273,7 @@
 			files = (
 				EBB4A9292252CB6000C2BCE8 /* Main.storyboard in Resources */,
 				EB56E49F22503B00000109FE /* LaunchScreen.storyboard in Resources */,
+				EBB4A93522555E5C00C2BCE8 /* NewItemViewController.xib in Resources */,
 				EB56E49C22503B00000109FE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,6 +305,7 @@
 				EBB4A9312254C85F00C2BCE8 /* AddAMealDelegate.swift in Sources */,
 				EBB4A9272252CA4E00C2BCE8 /* ViewController.swift in Sources */,
 				EB56E49522503AFE000109FE /* AppDelegate.swift in Sources */,
+				EBB4A93722555E9F00C2BCE8 /* NewItemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -28,6 +28,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var selected = Array<Item>()
     var delegate : AddAMealDelegate?
     
+    //Metodo executado ao criar a View
+    override func viewDidLoad() {
+        let newItemButton = UIBarButtonItem(title: "new item", style: UIBarButtonItem.Style.plain, target: self, action: #selector(showNewItem))
+        navigationItem.rightBarButtonItem = newItemButton
+    }
+    
+    //Inicializando a tela de cadastro de novo item
+    @objc func showNewItem() {
+        let newItem = NewItemViewController()
+        if let navigation = navigationController {
+            navigation.pushViewController(newItem, animated: true)
+        }
+    }
+    
     @IBAction func add() {
         if (nameField == nil || happinessField == nil) {
             return
