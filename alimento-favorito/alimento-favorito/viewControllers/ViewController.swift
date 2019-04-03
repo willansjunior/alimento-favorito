@@ -36,7 +36,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let name:String = nameField!.text!
         if let happiness = Int(happinessField!.text!) {
             let meal = Meal(name: name, happiness: happiness, items: selected)
-//            meal.items = selected
             print("Comi \(meal.name) e a nota foi \(meal.happiness)")
             
             if (delegate == nil) {
@@ -75,6 +74,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 selected.append(items[item])
             } else {
                 cell.accessoryType = UITableViewCell.AccessoryType.none
+                let item = items[indexPath.row]
+                if let position = selected.firstIndex(of: item) {
+                    selected.remove(at: position)
+                }
             }
         }
     }
