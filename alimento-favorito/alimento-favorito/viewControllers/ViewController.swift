@@ -9,7 +9,8 @@
 import UIKit
 
 //UITableViewDataSource utilizado para utilizar o TableView no Controller
-class ViewController: UIViewController, UITableViewDataSource {
+//UITableViewDelegate utilizado para ter acesso ao didSelectRowAt
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet var nameField : UITextField?
     @IBOutlet var happinessField : UITextField?
@@ -64,5 +65,16 @@ class ViewController: UIViewController, UITableViewDataSource {
         return cell
     }
 
+    //Utilizado para selecionar as linhas do TableView
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) {
+            if (cell.accessoryType == UITableViewCell.AccessoryType.none) {
+                cell.accessoryType = UITableViewCell.AccessoryType.checkmark
+            } else {
+                cell.accessoryType = UITableViewCell.AccessoryType.none
+            }
+        }
+    }
+    
 }
 
