@@ -12,6 +12,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewItemViewController" customModule="alimento_favorito" customModuleProvider="target">
             <connections>
+                <outlet property="caloriesFild" destination="Eeh-jx-gAV" id="d5y-L0-6eR"/>
+                <outlet property="nameFiled" destination="7cW-Wy-rq8" id="EeS-K5-azE"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

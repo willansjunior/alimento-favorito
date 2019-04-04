@@ -10,7 +10,7 @@ import UIKit
 
 //UITableViewDataSource utilizado para utilizar o TableView no Controller
 //UITableViewDelegate utilizado para ter acesso ao didSelectRowAt
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AddAnItemDelegate {
     
     @IBOutlet var nameField : UITextField?
     @IBOutlet var happinessField : UITextField?
@@ -27,6 +27,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     var selected = Array<Item>()
     var delegate : AddAMealDelegate?
+    @IBOutlet var tableView : UITableView?
+    
+    func add(_ item: Item) {
+        items.append(item)
+        if let table = tableView {
+            table.reloadData()
+        }
+    }
     
     //Metodo executado ao criar a View
     override func viewDidLoad() {
@@ -36,7 +44,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     //Inicializando a tela de cadastro de novo item
     @objc func showNewItem() {
-        let newItem = NewItemViewController()
+        //Parametro de delegate criado no controler NewItemViewController
+        let newItem = NewItemViewController(delegate: self)
         if let navigation = navigationController {
             navigation.pushViewController(newItem, animated: true)
         }

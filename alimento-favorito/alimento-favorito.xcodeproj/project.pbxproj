@@ -20,6 +20,7 @@
 		EBB4A9312254C85F00C2BCE8 /* AddAMealDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB4A9302254C85F00C2BCE8 /* AddAMealDelegate.swift */; };
 		EBB4A93522555E5C00C2BCE8 /* NewItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBB4A93322555E5C00C2BCE8 /* NewItemViewController.xib */; };
 		EBB4A93722555E9F00C2BCE8 /* NewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB4A93622555E9F00C2BCE8 /* NewItemViewController.swift */; };
+		EBB4A9392256096A00C2BCE8 /* AddAnItemDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB4A9382256096A00C2BCE8 /* AddAnItemDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		EBB4A9302254C85F00C2BCE8 /* AddAMealDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAMealDelegate.swift; sourceTree = "<group>"; };
 		EBB4A93322555E5C00C2BCE8 /* NewItemViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewItemViewController.xib; sourceTree = "<group>"; };
 		EBB4A93622555E9F00C2BCE8 /* NewItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewItemViewController.swift; sourceTree = "<group>"; };
+		EBB4A9382256096A00C2BCE8 /* AddAnItemDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAnItemDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 				EBB4A9302254C85F00C2BCE8 /* AddAMealDelegate.swift */,
 				EBB4A9222252C84900C2BCE8 /* Meal.swift */,
 				EBB4A9242252C8C200C2BCE8 /* Item.swift */,
+				EBB4A9382256096A00C2BCE8 /* AddAnItemDelegate.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				EBB4A9252252C8C200C2BCE8 /* Item.swift in Sources */,
 				EBB4A9232252C84900C2BCE8 /* Meal.swift in Sources */,
 				EBB4A9312254C85F00C2BCE8 /* AddAMealDelegate.swift in Sources */,
+				EBB4A9392256096A00C2BCE8 /* AddAnItemDelegate.swift in Sources */,
 				EBB4A9272252CA4E00C2BCE8 /* ViewController.swift in Sources */,
 				EB56E49522503AFE000109FE /* AppDelegate.swift in Sources */,
 				EBB4A93722555E9F00C2BCE8 /* NewItemViewController.swift in Sources */,

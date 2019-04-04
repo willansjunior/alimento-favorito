@@ -9,8 +9,37 @@
 import UIKit
 
 class NewItemViewController: UIViewController {
+    
+    //Criacao da variavel delegate
+    var delegate:AddAnItemDelegate?
+    
+    //Inicializando o delegate
+    init(delegate: AddAnItemDelegate) {
+        //Obrigatorio o uso do super por eranca da classe pai
+        super.init(nibName: "NewItemViewController", bundle: nil)
+        self.delegate = delegate
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
 
+    @IBOutlet var nameFiled : UITextField?
+    @IBOutlet var caloriesFild : UITextField?
+    
     @IBAction func addNewItem() {
+        let name = nameFiled!.text
+        let calories = Double(caloriesFild!.text!)
+        
+        //Validando se os dados e o delegate sao nulos
+        if (name == nil || calories == nil || delegate == nil) {
+            return
+        }
+        
+        //Inicializando item
+        let item = Item(name: name!, calories: calories!)
+        //Utilizando delegate para chamar o metodo de adicionar item da interface
+        delegate!.add(item)
         if let navigation = navigationController {
             navigation.popViewController(animated: true)
         }
