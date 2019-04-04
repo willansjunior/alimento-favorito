@@ -48,7 +48,18 @@ class MealsTableViewController : UITableViewController, AddAMealDelegate {
             if let indexPath = tableView.indexPath(for: cell) {
                 let row = indexPath.row
                 let meal = meals[row]
-                print("Long Press \(meal.name)")
+                
+                //Montando um alert
+                let details = UIAlertController(title: meal.name, message: "A felicidade \(meal.happiness)", preferredStyle: UIAlertController.Style.alert)
+                
+                //Criando botão de OK para o alert
+                let ok = UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: nil)
+                
+                //Atribuindo botão de OK ao alert
+                details.addAction(ok)
+                
+                //Exibindo o alert
+                present(details, animated: true, completion: nil)
             }
         }
     }
