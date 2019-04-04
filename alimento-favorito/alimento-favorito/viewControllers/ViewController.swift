@@ -33,6 +33,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         items.append(item)
         if let table = tableView {
             table.reloadData()
+        } else {
+            //Chamada de um alert generico
+            Alert(controller:self).show(message:"Não foi possivel atualizar a lista")
         }
     }
     
@@ -48,6 +51,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let newItem = NewItemViewController(delegate: self)
         if let navigation = navigationController {
             navigation.pushViewController(newItem, animated: true)
+        } else {
+            Alert(controller: self).show()
         }
     }
     

@@ -50,7 +50,7 @@ class MealsTableViewController : UITableViewController, AddAMealDelegate {
                 let meal = meals[row]
                 
                 //Montando um alert
-                let details = UIAlertController(title: meal.name, message: "A felicidade \(meal.happiness)", preferredStyle: UIAlertController.Style.alert)
+                let details = UIAlertController(title: meal.name, message: meal.details(), preferredStyle: UIAlertController.Style.alert)
                 
                 //Criando botão de OK para o alert
                 let ok = UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: nil)
