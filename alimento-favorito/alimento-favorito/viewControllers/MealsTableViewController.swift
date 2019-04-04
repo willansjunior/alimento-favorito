@@ -35,7 +35,22 @@ class MealsTableViewController : UITableViewController, AddAMealDelegate {
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: nil)
         cell.textLabel!.text = meal.name
         
+        //Adicionando uma funcao de long press a lista
+        let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(showDetails))
+        cell.addGestureRecognizer(longPressRecognizer)
+        
         return cell
+    }
+    
+    @objc func showDetails(recognizer: UILongPressGestureRecognizer) {
+        if (recognizer.state == UILongPressGestureRecognizer.State.began) {
+            let cell = recognizer.view as! UITableViewCell
+            if let indexPath = tableView.indexPath(for: cell) {
+                let row = indexPath.row
+                let meal = meals[row]
+                print("Long Press \(meal.name)")
+            }
+        }
     }
     
 }
