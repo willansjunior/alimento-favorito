@@ -56,27 +56,37 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
     
-    @IBAction func add() {
-        if (nameField == nil || happinessField == nil) {
-            return
+    func stringToInt(_ text:String?) -> Int? {
+        if let number = text {
+            return Int(number)
         }
-        
-        let name:String = nameField!.text!
-        if let happiness = Int(happinessField!.text!) {
-            let meal = Meal(name: name, happiness: happiness, items: selected)
-            print("Comi \(meal.name) e a nota foi \(meal.happiness)")
-            
-            if (delegate == nil) {
+        return nil
+    }
+    
+    func getMealFromForm() -> Meal? {
+        if let name = nameField?.text {
+            if let happiness = stringToInt(happinessField?.text) {
+                let meal = Meal(name: name, happiness: happiness, items: selected)
+                return meal
+            }
+        }
+        return nil
+    }
+    
+    @IBAction func add() {
+        if let meal = getMealFromForm() {
+            if let meals = delegate {
+                meals.add(meal)
+                if let navigation = navigationController {
+                    navigation.popViewController(animated: true)
+                } else {
+                    Alert(controller: self).show("Refeição adicionada, mas não foi possivel retornar para tela anterior!")
+                }
                 return
             }
-            
-            delegate?.add(meal)
-            
-            if let navigation = navigationController {
-                navigation.popViewController(animated: true)
-            }
         }
-        
+        Alert(controller: self).show()
+        return
     }
     
     //Numero de itens para a TableView
@@ -105,8 +115,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 let item = items[indexPath.row]
                 if let position = selected.firstIndex(of: item) {
                     selected.remove(at: position)
+                } else {
+                    Alert(controller: self).show()
                 }
             }
+        } else {
+            Alert(controller: self).show()
         }
     }
     
