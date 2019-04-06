@@ -49,17 +49,35 @@ class MealsTableViewController : UITableViewController, AddAMealDelegate {
                 let row = indexPath.row
                 let meal = meals[row]
                 
-                //Montando um alert
-                let details = UIAlertController(title: meal.name, message: meal.details(), preferredStyle: UIAlertController.Style.alert)
+                RemoveMealController(controller: self).show(meal, handler : { action in
+                    //Adicionando closure para substituir a função de remoção dentro e expor o codigo dentro do handler
+                    self.meals.remove(at: row)
+                    self.tableView.reloadData()
+                })
                 
-                //Criando botão de OK para o alert
-                let ok = UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: nil)
-                
-                //Atribuindo botão de OK ao alert
-                details.addAction(ok)
-                
-                //Exibindo o alert
-                present(details, animated: true, completion: nil)
+//                //Montando um alert
+//                let details = UIAlertController(title: meal.name, message: meal.details(), preferredStyle: UIAlertController.Style.alert)
+//                
+//                //Função para o botão de remover
+////                func removeSelected(action:UIAlertAction) {
+////                    meals.remove(at: row)
+////                    tableView.reloadData()
+////                }
+//                
+//                //Criando botão de OK para o alert
+//                let cancel = UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: nil)
+//                let remove = UIAlertAction(title: "Remover", style: UIAlertAction.Style.destructive, handler: { action in
+//                    //Adicionando closure para substituir a função de remoção dentro e expor o codigo dentro do handler
+//                    self.meals.remove(at: row)
+//                    self.tableView.reloadData()
+//                })
+//                
+//                //Atribuindo botão de OK ao alert
+//                details.addAction(cancel)
+//                details.addAction(remove)
+//                
+//                //Exibindo o alert
+//                present(details, animated: true, completion: nil)
             }
         }
     }
