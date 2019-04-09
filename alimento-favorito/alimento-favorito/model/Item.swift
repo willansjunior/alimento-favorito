@@ -8,7 +8,18 @@
 
 import Foundation
 
-class Item: Equatable {
+class Item: NSObject, NSCoding {
+    
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(name, forKey: "name")
+        aCoder.encode(calories, forKey: "calories")
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        self.name = aDecoder.decodeObject(forKey: "name") as! String
+        self.calories = aDecoder.decodeDouble(forKey: "calories")
+    }
+    
     
     let name:String
     let calories:Double

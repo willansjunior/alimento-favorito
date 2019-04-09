@@ -23,6 +23,7 @@
 		EBB4A9392256096A00C2BCE8 /* AddAnItemDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB4A9382256096A00C2BCE8 /* AddAnItemDelegate.swift */; };
 		EBB4A93B2256B6F100C2BCE8 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB4A93A2256B6F100C2BCE8 /* Alert.swift */; };
 		EBB4A93D2257880200C2BCE8 /* RemoveMealController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB4A93C2257880200C2BCE8 /* RemoveMealController.swift */; };
+		EBB4A93F225BD8A000C2BCE8 /* Dao.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB4A93E225BD8A000C2BCE8 /* Dao.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		EBB4A9382256096A00C2BCE8 /* AddAnItemDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAnItemDelegate.swift; sourceTree = "<group>"; };
 		EBB4A93A2256B6F100C2BCE8 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		EBB4A93C2257880200C2BCE8 /* RemoveMealController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveMealController.swift; sourceTree = "<group>"; };
+		EBB4A93E225BD8A000C2BCE8 /* Dao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dao.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 				EBB4A9222252C84900C2BCE8 /* Meal.swift */,
 				EBB4A9242252C8C200C2BCE8 /* Item.swift */,
 				EBB4A9382256096A00C2BCE8 /* AddAnItemDelegate.swift */,
+				EBB4A93E225BD8A000C2BCE8 /* Dao.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 			files = (
 				EBB4A93D2257880200C2BCE8 /* RemoveMealController.swift in Sources */,
 				EBB4A93B2256B6F100C2BCE8 /* Alert.swift in Sources */,
+				EBB4A93F225BD8A000C2BCE8 /* Dao.swift in Sources */,
 				EBB4A92B22539A0D00C2BCE8 /* MealsTableViewController.swift in Sources */,
 				EBB4A9252252C8C200C2BCE8 /* Item.swift in Sources */,
 				EBB4A9232252C84900C2BCE8 /* Meal.swift in Sources */,

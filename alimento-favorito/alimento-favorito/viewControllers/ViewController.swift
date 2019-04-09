@@ -31,6 +31,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func add(_ item: Item) {
         items.append(item)
+//        NSKeyedArchiver.archiveRootObject(items, toFile: getArchive())
+        Dao().save(items)
         if let table = tableView {
             table.reloadData()
         } else {
@@ -43,6 +45,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         let newItemButton = UIBarButtonItem(title: "new item", style: UIBarButtonItem.Style.plain, target: self, action: #selector(showNewItem))
         navigationItem.rightBarButtonItem = newItemButton
+
+        items = Dao().load()
+//        if let loaded = NSKeyedUnarchiver.unarchiveObject(withFile: getArchive()) {
+//            self.items = loaded as! Array<Item>
+//        }
+    }
+    
+    func getArchive() -> String {
+        let userDirs = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
+        let dir = userDirs[0]
+        let archive = "\(dir)/alimento-favorito-items.dados"
+        return archive
     }
     
     //Inicializando a tela de cadastro de novo item

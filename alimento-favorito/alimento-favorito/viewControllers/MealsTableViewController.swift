@@ -15,8 +15,19 @@ class MealsTableViewController : UITableViewController, AddAMealDelegate {
     
     func add(_ meal:Meal) {
         meals.append(meal)
+        //NSKeyedArchiver.archiveRootObject(meals, toFile: getArchive())
+        Dao().save(meals)
         tableView.reloadData()
     }
+    
+    override func viewDidLoad() {
+//        if let loaded = NSKeyedUnarchiver.unarchiveObject(withFile: getArchive()) {
+//            self.meals = loaded as! Array<Meal>
+//        }
+        self.meals = Dao().load()
+    }
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "addMeals") {
@@ -54,30 +65,6 @@ class MealsTableViewController : UITableViewController, AddAMealDelegate {
                     self.meals.remove(at: row)
                     self.tableView.reloadData()
                 })
-                
-//                //Montando um alert
-//                let details = UIAlertController(title: meal.name, message: meal.details(), preferredStyle: UIAlertController.Style.alert)
-//                
-//                //Função para o botão de remover
-////                func removeSelected(action:UIAlertAction) {
-////                    meals.remove(at: row)
-////                    tableView.reloadData()
-////                }
-//                
-//                //Criando botão de OK para o alert
-//                let cancel = UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: nil)
-//                let remove = UIAlertAction(title: "Remover", style: UIAlertAction.Style.destructive, handler: { action in
-//                    //Adicionando closure para substituir a função de remoção dentro e expor o codigo dentro do handler
-//                    self.meals.remove(at: row)
-//                    self.tableView.reloadData()
-//                })
-//                
-//                //Atribuindo botão de OK ao alert
-//                details.addAction(cancel)
-//                details.addAction(remove)
-//                
-//                //Exibindo o alert
-//                present(details, animated: true, completion: nil)
             }
         }
     }
